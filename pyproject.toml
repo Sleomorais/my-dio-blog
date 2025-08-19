@@ -1,5 +1,5 @@
 [project]
-name = "my-dio-blog"
+name = "dio-blog"
 version = "0.1.0"
 description = ""
 authors = [
@@ -7,9 +7,6 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.10"
-
-packages = [{ include = "src" }]
-
 dependencies = [
     "fastapi",
     "uvicorn[standard] (>=0.35.0,<0.36.0)",
