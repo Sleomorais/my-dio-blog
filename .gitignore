@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / compiled files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# Virtual environment
+env/
+venv/
+.venv/
+# Add other common virtual environment names if used (e.g., .env)
+
+# Environment variables and secrets
+.env
+# You might have other files containing sensitive information, e.g., secrets.json
+
+# Database files
+*.db
+# For SQLite databases, common names include:
+# test_db.db
+# development.db
+# production.db
+
+# Logs
+*.log
+
+# IDE-specific files (examples for common IDEs)
+.idea/  # PyCharm
+.vscode/ # VS Code
+*.iml   # IntelliJ IDEA
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Jupyter Notebook files (if used for development)
+.ipynb_checkpoints/
+
+# Temporary files or test data
+tmp/
+temp/
