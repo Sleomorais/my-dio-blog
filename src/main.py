@@ -1,18 +1,19 @@
+from contextlib import asynccontextmanager
+
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.controllers import auth, post
 from fastapi import FastAPI, Request
+from src.database import database
 from src.exceptions import NotFoundPostError
 
 
-# @asynccontextmanager
-# async def lifespan(app: FastAPI):
-#     from src.models.post import posts #noqa
-#     await database.connect()
-#     metadata.create_all(engine)
-#     yield
-#     await database.disconnect()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await database.connect()
+    yield
+    await database.disconnect()
 
 servers=[
         {"url": "https://stag.example.com", "description": "Staging environment"},
@@ -44,6 +45,7 @@ app = FastAPI(
     servers=servers,
     redoc_url=None,
     # openapi_url=None, #disable openapi
+    lifespan=lifespan
 )
 
 app.add_middleware(
