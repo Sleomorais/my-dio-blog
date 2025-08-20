@@ -17,11 +17,8 @@ dependencies = [
     "httpx (>=0.28.1,<0.29.0)",
     "pytest-mock (>=3.14.1,<4.0.0)",
     "pydantic-settings (>=2.10.1,<3.0.0)",
-<<<<<<< HEAD
     "alembic"
-=======
     "psycopg2-binary"
->>>>>>> 71983b6d101868148a562ff2fc97fb5cb884ade9
 ]
 
 [build-system]
